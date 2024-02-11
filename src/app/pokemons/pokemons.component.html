@@ -1,1 +1,5 @@
-<h2> Pokemons </h2>
+<ul>
+    <li *ngFor="let pokemon of pokemons">
+        <img src="{{pokemon.imageUrl}}" alt="Logo da Aplicação" style="display: block; margin: 0 auto;"> {{pokemon.id}} - {{ pokemon.name }} - {{pokemon.types}}
+    </li>
+  </ul>

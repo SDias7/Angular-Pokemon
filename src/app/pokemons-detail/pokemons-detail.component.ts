@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Pokemon } from '../pokemon';
+import { Pokemon } from '../Pokemon';
 import { PokemonService } from '../pokemon.service';
 import { Location } from '@angular/common';
 
