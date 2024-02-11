@@ -1,1 +1,19 @@
-<h1>{{title}}</h1>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+<div class="header">
+</div>
+<div class="autent"> 
+
+    User is authenticated?:
+    <input type="Radio" name="isAuth" (change)="login(false)"> No
+    <input type="Radio" name="isAuth" (change)="login(true)"> Yes
+</div>
+
+<br/>
+<nav>
+  <a routerLink="/pokemons">POKEMONS LIST</a>
+  <br> <br/>
+  <a routerLink="/dashboard">POKEMONS SEARCH</a>
+</nav>
+<router-outlet></router-outlet>
