@@ -6,13 +6,15 @@ import { AppComponent } from './Base/app.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { PokemonsSearchComponent } from './pokemons-search/pokemons-search.component';
 import { PokemonsDetailComponent } from './pokemons-detail/pokemons-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonsComponent,
     PokemonsSearchComponent,
-    PokemonsDetailComponent
+    PokemonsDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
