@@ -4,21 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './Base/app.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
-import { PokemonsSearchComponent } from './pokemons-search/pokemons-search.component';
-import { PokemonsDetailComponent } from './pokemons-detail/pokemons-detail.component';
+import { PokemonDetailComponent } from './pokemons-detail/pokemons-detail.component';
+import { PokemonSearchComponent } from './pokemons-search/pokemons-search.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonsComponent,
-    PokemonsSearchComponent,
-    PokemonsDetailComponent,
+    PokemonDetailComponent,
+    PokemonSearchComponent,
     DashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
