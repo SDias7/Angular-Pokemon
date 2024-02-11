@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { pokemon } from '../pokemon';
+import { ActivatedRoute } from '@angular/router';
+import { Pokemon } from '../pokemon';
 import { PokemonService } from '../pokemon.service';
-
+import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-pokemon-detail',
-  templateUrl: './pokemon-detail.component.html',
-  styleUrls: ['./pokemon-detail.component.css']
+  selector: 'app-pokemons-detail',
+  templateUrl: './pokemons-detail.component.html',
+  styleUrls: ['./pokemons-detail.component.css']
 })
 
 
 export class PokemonDetailComponent implements OnInit{
-  pokemon: pokemon | undefined;
+  pokemons: Pokemon[] = [];
+  pokemon: Pokemon | undefined ;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,13 +22,13 @@ export class PokemonDetailComponent implements OnInit{
   ) {}
 
   ngOnInit(): void {
-    this.getHero();
+    this.getPokemon();
   }
 
-  getHero(): void {
+  getPokemon(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.pokemonService.getHero(id)
-      .subscribe(pokemon => this.pokemon = hero);
+    this.pokemonService.getPokemon(id)
+      .subscribe(pokemon => this.pokemon = pokemon);
   }
 
   goBack(): void {
@@ -34,8 +36,8 @@ export class PokemonDetailComponent implements OnInit{
   }
 
   save(): void {
-    if (this.hero) {
-      this.heroService.updateHero(this.hero)
+    if (this.pokemon) {
+      this.pokemonService.updatePokemon(this.pokemon)
         .subscribe(() => this.goBack());
     }
   }
