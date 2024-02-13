@@ -1,1 +1,17 @@
-<p>dashboard works!</p>
+<div  class="containerrincipal">
+<h2>Battle Pokemons</h2>
+
+<div class="battle-container">
+  <a *ngIf="leftPokemon" routerLink="/detail/{{leftPokemon.id}}" class="pokemon-card">
+    <img src="{{leftPokemon.imageUrl}}" alt="Logo da Aplicação" class="pokemon-image">
+    <span class="pokemon-info">{{ leftPokemon.name }} - {{leftPokemon.types}}</span>
+  </a>
+
+  <div class="vs-card">VS</div>
+
+  <a *ngIf="rightPokemon" routerLink="/detail/{{rightPokemon.id}}" class="pokemon-card">
+    <img src="{{rightPokemon.imageUrl}}" alt="Logo da Aplicação" class="pokemon-image">
+    <span class="pokemon-info">{{ rightPokemon.name }} - {{rightPokemon.types}}</span>
+  </a>
+</div>
+</div>
