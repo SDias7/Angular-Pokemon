@@ -5,6 +5,7 @@ export interface Pokemon {
     weight : number;
     types: [];
     family: string;
+    imageUrl: string;
 
   }
 

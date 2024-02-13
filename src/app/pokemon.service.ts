@@ -20,32 +20,32 @@ export class PokemonService {
   constructor(
     private http: HttpClient,private messageService: MessageService) { }
 
-  getPokemons(): Observable<Pokemon[]> {
-    return this.http.get<Pokemon[]>(this.pokemonUrl)
-      .pipe(
-        tap(_ => this.log('fetched Pokemons')),
-        catchError(this.handleError<Pokemon[]>('getPokemons', []))
-      );
-  }
   // getPokemons(): Observable<Pokemon[]> {
-  //   return this.http.get<any[]>(this.pokemonUrl).pipe(
-  //     tap(_ => this.log('fetched Pokemons')),
-  //     catchError(this.handleError<Pokemon[]>('getPokemons', [])),
-  //     map(pokemons => {
-  //       return pokemons.map(pokemon => {
-  //         return {
-  //           id: pokemon.id,
-  //           name: pokemon.name,
-  //           height: pokemon.height,
-  //           weight: pokemon.weight,
-  //           types: pokemon.types,
-  //           family: pokemon.family,
-  //           imageUrl: `${this.imgUrl}${pokemon.id}.png` // Montando o URL da imagem
-  //         };
-  //       });
-  //     })
-  //   );
+  //   return this.http.get<Pokemon[]>(this.pokemonUrl)
+  //     .pipe(
+  //       tap(_ => this.log('fetched Pokemons')),
+  //       catchError(this.handleError<Pokemon[]>('getPokemons', []))
+  //     );
   // }
+  getPokemons(): Observable<Pokemon[]> {
+    return this.http.get<any[]>(this.pokemonUrl).pipe(
+      tap(_ => this.log('fetched Pokemons')),
+      catchError(this.handleError<Pokemon[]>('getPokemons', [])),
+      map(pokemons => {
+        return pokemons.map(pokemon => {
+          return {
+            id: pokemon.id,
+            name: pokemon.name,
+            height: pokemon.height,
+            weight: pokemon.weight,
+            types: pokemon.types,
+            family: pokemon.family,
+            imageUrl: `${this.imgUrl}${pokemon.id}.png` 
+          };
+        });
+      })
+    );
+  }
 
 
   getPokemonNo404<Data>(id: number): Observable<Pokemon> {

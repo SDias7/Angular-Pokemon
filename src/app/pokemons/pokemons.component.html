@@ -1,5 +1,25 @@
-<ul>
+ <!-- <ul>
     <li *ngFor="let pokemon of pokemons">
-        <!-- <img src="{{pokemon.imageUrl}}" alt="Logo da Aplicação" style="display: block; margin: 0 auto;"> {{pokemon.id}} - {{ pokemon.name }} - {{pokemon.types}} -->
+        <img src="{{pokemon.imageUrl}}" alt=" img" style="display: block; margin: 0 auto;"> {{pokemon.id}} - {{ pokemon.name }} - {{pokemon.types}} 
     </li>
-  </ul>
+  </ul>  -->
+
+  
+
+<ul class="pokemon-list">
+    <li *ngFor="let pokemon of pokemons" class="pokemon-card">
+        <div class="pokemon-circle">
+            <img src="{{pokemon.imageUrl}}" alt=" img" class="pokemon-image">
+            <div class="pokemon-details">
+                <span class="pokemon-id">#{{pokemon.id}}</span>
+                <span class="pokemon-name">{{pokemon.name}}</span>
+                <span class="pokemon-types">{{pokemon.types}}</span>
+            </div>
+        </div>
+    </li>
+</ul>
+
+
+
+
+  

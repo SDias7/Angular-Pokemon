@@ -1,0 +1,164 @@
+/* Estilos para o header */
+.header {
+    position: relative;
+    height: 400px; /* Ajuste conforme necessário para a altura desejada */
+    background-color: rgba(213, 239, 65, 0.884);
+    color: #fff; /* Texto branco */
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; 
+    display: flex;
+}
+
+.imagem2 {
+    width: 100%; /* Modificação para tornar a imagem responsiva */
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 15px;
+    filter: grayscale(40%); 
+    transition: filter 0.3s ease-in-out;
+}
+
+.header:hover .imagem2 {
+    filter: grayscale(20%); /* Remove o efeito de escala de cinza ao passar o mouse sobre o header */
+}
+
+.header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Adiciona uma sombra mais pronunciada ao texto */
+    transition: font-size 0.3s ease-in-out;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(213, 239, 65, 0.6), rgba(213, 239, 65, 0.1));
+    z-index: -1;
+    border-radius: 15px; /* Adiciona cantos arredondados ao gradiente */
+}
+
+/* Estilos para a div de autenticação */
+.autent {
+    background: linear-gradient(to right, rgba(33, 57, 193, 0.9), rgba(213, 239, 65, 0.9)); /* Gradiente de cores */
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid rgba(213, 239, 65, 0.884);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin: 40px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.autent input[type="radio"] {
+    margin: 15px 0;
+    cursor: pointer;
+    appearance: none; /* Remove o estilo padrão do radio button */
+}
+
+.autent label {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Estilizando o radio button customizado */
+.autent label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin-right: 12px;
+    vertical-align: middle;
+    background-color: #2139c1; /* Cor do radio button */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.autent input[type="radio"]:checked + label::before {
+    background-color: #d5ef41; /* Cor do radio button quando selecionado */
+}
+
+.autent label:hover::before {
+    transform: scale(1.2); /* Efeito de escala ao passar o mouse sobre o radio button */
+}
+
+/* Estilos para o nav */
+nav {
+    background: linear-gradient(to right, #00bcd4, #1976D2); /* Gradiente de cores */
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Efeito de hover para os links do nav */
+nav a {
+    color: #000000; /* Texto branco */
+    text-decoration: none;
+    padding: 15px 25px;
+    margin: 0 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style:inherit;
+}
+
+nav a:hover {
+    background-color: #004d59; /* Verde mais escuro ao passar o mouse */
+}
+
+/* Efeito de underline ao passar o mouse sobre os links */
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Efeito de sombra nos links */
+nav a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+nav a:hover::before {
+    opacity: 1;
+}

@@ -8,6 +8,8 @@ import { AuthService } from '../auth.service';
 })
 
 export class AppComponent {
+  img = 'assets/Pokemon.png'
+  img1 = 'assets/pokemon1.png'
 
   constructor(private authservice: AuthService) { }
 

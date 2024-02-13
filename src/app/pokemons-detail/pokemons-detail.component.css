@@ -1,0 +1,43 @@
+/* Estilos gerais para o contêiner do Pokémon detalhado */
+.pokemon-details-container {
+    background-color: #ffcccc; /* Tons de vermelho claro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Estilos para o título h2 */
+.pokemon-details-container h2 {
+    color: #cc0000; /* Vermelho escuro */
+}
+
+/* Estilos para as seções de detalhes do Pokémon */
+.pokemon-details-container div {
+    margin: 10px 0;
+}
+
+/* Estilos para as etiquetas "span" dentro das seções de detalhes */
+.pokemon-details-container span {
+    font-weight: bold;
+    color: #cc0000; /* Vermelho escuro */
+}
+
+/* Estilos para o botão "go back" */
+.pokemon-details-container button {
+    background-color: #cc0000; /* Vermelho escuro */
+    color: #fff; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Efeito de hover para o botão */
+.pokemon-details-container button:hover {
+    background-color: #990000; /* Vermelho mais escuro ao passar o mouse */
+}
