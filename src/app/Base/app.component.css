@@ -55,11 +55,11 @@
 /* Estilos para a div de autenticação */
 .autent {
     background: linear-gradient(to right, rgba(33, 57, 193, 0.9), rgba(213, 239, 65, 0.9)); /* Gradiente de cores */
-    padding: 40px;
-    border-radius: 20px;
+    padding: 10px;
+    border-radius: 40px;
     border: 3px solid rgba(213, 239, 65, 0.884);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    margin: 40px 0;
+    margin: 20px 280px  ;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: oblique;
     display: flex;
@@ -71,7 +71,7 @@
 .autent input[type="radio"] {
     margin: 15px 0;
     cursor: pointer;
-    appearance: none; /* Remove o estilo padrão do radio button */
+    position: relative;
 }
 
 .autent label {
@@ -91,9 +91,9 @@
     height: 20px;
     border: 3px solid #fff;
     border-radius: 50%;
-    margin-right: 12px;
+    margin-right: 18px;
     vertical-align: middle;
-    background-color: #2139c1; /* Cor do radio button */
+    background-color: #2139c1; 
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .autent label:hover::before {
-    transform: scale(1.2); /* Efeito de escala ao passar o mouse sobre o radio button */
+    transform: scale(1.2); 
 }
 
 /* Estilos para o nav */
@@ -120,7 +120,7 @@ nav {
 
 /* Efeito de hover para os links do nav */
 nav a {
-    color: #000000; /* Texto branco */
+    color: #000000; 
     text-decoration: none;
     padding: 15px 25px;
     margin: 0 10px;
@@ -131,10 +131,9 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #004d59; /* Verde mais escuro ao passar o mouse */
+    background-color: #004d59; 
 }
 
-/* Efeito de underline ao passar o mouse sobre os links */
 nav a::after {
     content: '';
     display: block;
@@ -148,7 +147,7 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* Efeito de sombra nos links */
+
 nav a::before {
     content: '';
     display: block;
@@ -156,14 +155,13 @@ nav a::before {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: 50%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+    width: 8%;
+    height: 5%;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 
 }
 
 nav a:hover::before {
-    opacity: 1;
+    opacity: 2;
 }

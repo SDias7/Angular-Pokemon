@@ -5,7 +5,7 @@
   </ul>  -->
 
   
-
+  <app-pokemon-search (search)="search($event)"></app-pokemon-search>
 <ul class="pokemon-list">
     <li *ngFor="let pokemon of pokemons" class="pokemon-card">
         <div class="pokemon-circle">

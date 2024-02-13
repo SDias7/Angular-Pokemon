@@ -32,4 +32,15 @@ export class PokemonsComponent implements OnInit {
     this.pokemons = this.pokemons.filter(p => p !== pokemon);
     this.pokemonService.deletePokemon(pokemon.id).subscribe();
   }
+  
+  search(term: string): void {
+
+    if (term) {
+      this.pokemons = this.pokemons.filter((pokemon) =>
+        pokemon.name.toLowerCase().includes(term.toLowerCase()));
+    } else {
+      this.getPokemons();
+    }
+  }
+ 
 }

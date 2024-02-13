@@ -6,6 +6,7 @@ export interface Pokemon {
     types: [];
     family: string;
     imageUrl: string;
+    
 
   }
 

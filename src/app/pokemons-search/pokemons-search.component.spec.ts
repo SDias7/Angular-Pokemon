@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PokemonsSearchComponent } from './pokemons-search.component';
+import { PokemonSearchComponent } from './pokemons-search.component';
 
 describe('PokemonsSearchComponent', () => {
-  let component: PokemonsSearchComponent;
-  let fixture: ComponentFixture<PokemonsSearchComponent>;
+  let component: PokemonSearchComponent;
+  let fixture: ComponentFixture<PokemonSearchComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PokemonsSearchComponent]
+      declarations: [PokemonSearchComponent]
     });
-    fixture = TestBed.createComponent(PokemonsSearchComponent);
+    fixture = TestBed.createComponent(PokemonSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
