@@ -9,6 +9,8 @@ import { PokemonService } from '../pokemon.service';
 })
 export class PokemonsComponent implements OnInit {
   pokemons: Pokemon[] = [];
+  currentPage = 1;
+  itemsPerPage = 15;
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -32,7 +34,7 @@ export class PokemonsComponent implements OnInit {
     this.pokemons = this.pokemons.filter(p => p !== pokemon);
     this.pokemonService.deletePokemon(pokemon.id).subscribe();
   }
-  
+
   search(term: string): void {
 
     if (term) {

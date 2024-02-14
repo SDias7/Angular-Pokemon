@@ -1,17 +1,25 @@
-<div  class="containerrincipal">
 <h2>Battle Pokemons</h2>
 
 <div class="battle-container">
-  <a *ngIf="leftPokemon" routerLink="/detail/{{leftPokemon.id}}" class="pokemon-card">
-    <img src="{{leftPokemon.imageUrl}}" alt="Logo da Aplicação" class="pokemon-image">
-    <span class="pokemon-info">{{ leftPokemon.name }} - {{leftPokemon.types}}</span>
-  </a>
+  <div class="pokemons-menu">
+    <div class="pokemon-card" *ngIf="leftPokemon">
+      <img src="{{ leftPokemon.imageUrl }}" alt="Logo da Aplicação" class="pokemon-image">
+      <span class="pokemon-info">{{ leftPokemon.name }} - HP: {{ leftPokemon.height }}</span>
+    </div>
 
-  <div class="vs-card">VS</div>
+    <div class="vs-card">
+      <h1 appHighlight>VS </h1 >
+      <button (click)="battle()">Battle</button>
+      <div *ngIf="winner" class="winner-info">
+        <p>Winner:</p>
+        <img src="{{ winner.imageUrl }}" alt="Logo da Aplicação" class="pokemon-image" routerLink="/detail/{{winner.id}}" >
+        <span class="pokemon-info">{{ winner.name }}</span>
+      </div>
+    </div>
 
-  <a *ngIf="rightPokemon" routerLink="/detail/{{rightPokemon.id}}" class="pokemon-card">
-    <img src="{{rightPokemon.imageUrl}}" alt="Logo da Aplicação" class="pokemon-image">
-    <span class="pokemon-info">{{ rightPokemon.name }} - {{rightPokemon.types}}</span>
-  </a>
-</div>
+    <div class="pokemon-card" *ngIf="rightPokemon">
+      <img src="{{ rightPokemon.imageUrl }}" alt="Logo da Aplicação" class="pokemon-image">
+      <span class="pokemon-info">{{ rightPokemon.name }} - HP: {{ rightPokemon.height }}</span>
+    </div>
+  </div>
 </div>

@@ -5,9 +5,9 @@
   </ul>  -->
 
   
-  <app-pokemon-search (search)="search($event)"></app-pokemon-search>
+<app-pokemon-search (search)="search($event)"></app-pokemon-search>
 <ul class="pokemon-list">
-    <li *ngFor="let pokemon of pokemons" class="pokemon-card">
+    <li *ngFor="let pokemon of pokemons | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }" class="pokemon-card" routerLink="/detail/{{pokemon.id}}">
         <div class="pokemon-circle">
             <img src="{{pokemon.imageUrl}}" alt=" img" class="pokemon-image">
             <div class="pokemon-details">
@@ -20,6 +20,9 @@
 </ul>
 
 
+<div class="pagination-container">
+<pagination-controls class="pagin" (pageChange)="currentPage = $event"></pagination-controls>
+</div>
 
 
   

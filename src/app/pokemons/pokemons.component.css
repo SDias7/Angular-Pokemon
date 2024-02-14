@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #081c24; /* Azul escuro */
+    background-color: #081c24;
 }
 
 .pokemon-list {
@@ -14,7 +14,7 @@ body {
 
 .pokemon-card {
     margin: 20px;
-    background-color: rgba(239, 236, 65, 0.884); /* Amarelo */
+    background-color: rgba(239, 236, 65, 0.884); 
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -30,8 +30,8 @@ body {
 .pokemon-circle {
     border-radius: 40%;
     overflow: hidden;
-    border: 3px solid #2139c1c7; /* Azul médio */
-    box-shadow: 6px 4px 10px rgba(255, 235, 59, 0.945); /* Amarelo */
+    border: 3px solid #2139c1c7; 
+    box-shadow: 6px 4px 10px rgba(255, 235, 59, 0.945); 
 }
 
 .pokemon-image {
@@ -71,4 +71,54 @@ body {
 .pokemon-card:hover .pokemon-id,
 .pokemon-card:hover .pokemon-types {
     color: #150985; 
+}
+
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.pagination-controls {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+.pagination-controls li {
+    margin: 0;
+}
+
+.pagin {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ffcc00, #3399ff);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.pagin a:hover {
+    background: linear-gradient(45deg, #ff9933, #3366cc);
+    transform: scale(1.2);
+}
+
+.pagin .current {
+    background: linear-gradient(45deg, #ff9933, #3366cc);
+    cursor: default;
+}
+
+.pagin .ellipsis {
+    padding: 12px 5px;
 }

@@ -5,14 +5,15 @@ import { VerifyAuthService } from './verify-auth.service';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { PokemonSearchComponent } from './pokemons-search/pokemons-search.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent},
-  { path: 'detail/:id', component: PokemonDetailComponent},
+  { path: 'dashboard', component: DashboardComponent,canActivate: [VerifyAuthService]},
+  { path: 'detail/:id', component: PokemonDetailComponent, canActivate: [VerifyAuthService]},
   { path: 'pokemons', component: PokemonsComponent},
-  { path: 'pokemon-search', component: PokemonSearchComponent}
-
+  { path: 'pokemon-search', component: PokemonSearchComponent},
+  { path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({

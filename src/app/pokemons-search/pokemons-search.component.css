@@ -22,18 +22,18 @@ label {
 }
 
 #search-box:focus {
-    border-color: #007bff; /* Cor personalizada para o foco */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3); /* Sutil sombra ao focar */
+    border-color: #007bff; 
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
     outline: none;
 }
 
-/* Efeito de transição suave para a entrada de texto e a cor do placeholder */
+
 #search-box::placeholder {
     transition: color 0.3s ease-in-out;
-    color: #999; /* Cor do placeholder padrão */
+    color: #999; 
 }
 
 #search-box:hover::placeholder,
 #search-box:focus::placeholder {
-    color: #007bff; /* Cor do placeholder ao passar o mouse ou focar */
+    color: #007bff; 
 }

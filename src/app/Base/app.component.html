@@ -6,10 +6,12 @@
 
 </div>
 <div class="autent"> 
+  User is authenticated?:
+  <input type="radio" name="isAuth" id="no" (change)="login(false)">
+  <label for="no" class="no">No</label>
 
-    User is authenticated?:
-    <input type="Radio" name="isAuth" (change)="login(false)"> No
-    <input type="Radio" name="isAuth" (change)="login(true)"> Yes
+  <input type="radio" name="isAuth" id="yes" (change)="login(true)">
+  <label for="yes" class="yes">Yes</label>
 </div>
 
 <br/>

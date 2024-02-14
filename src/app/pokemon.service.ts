@@ -20,13 +20,6 @@ export class PokemonService {
   constructor(
     private http: HttpClient,private messageService: MessageService) { }
 
-  // getPokemons(): Observable<Pokemon[]> {
-  //   return this.http.get<Pokemon[]>(this.pokemonUrl)
-  //     .pipe(
-  //       tap(_ => this.log('fetched Pokemons')),
-  //       catchError(this.handleError<Pokemon[]>('getPokemons', []))
-  //     );
-  // }
   getPokemons(): Observable<Pokemon[]> {
     return this.http.get<any[]>(this.pokemonUrl).pipe(
       tap(_ => this.log('fetched Pokemons')),
@@ -65,7 +58,18 @@ export class PokemonService {
     const url = `${this.pokemonUrl}/${id}`;
     return this.http.get<Pokemon>(url).pipe(
       tap(_ => this.log(`fetched pokemon id=${id}`)),
-      catchError(this.handleError<Pokemon>(`getPokemon id=${id}`))
+      catchError(this.handleError<Pokemon>(`getPokemon id=${id}`)),
+      map(pokemon => {
+        return {
+          id: pokemon.id,
+          name: pokemon.name,
+          height: pokemon.height,
+          weight: pokemon.weight,
+          types: pokemon.types,
+          family: pokemon.family,
+          imageUrl: `${this.imgUrl}${pokemon.id}.png`
+        };
+      })
     );
   }
 
